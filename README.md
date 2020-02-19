@@ -30,7 +30,7 @@
 - +支持多种压缩工具
 - +支持多种图片选择工具
 
-GitHub地址： [https://github.com/crazycodeboy/TakePhoto](https://github.com/crazycodeboy/TakePhoto)
+GitHub地址： [https://github.com/iflytek-duan/TakePhoto](https://github.com/iflytek-duan/TakePhoto)
 ## 目录
 
 - [安装说明](#安装说明)
@@ -47,7 +47,7 @@ GitHub地址： [https://github.com/crazycodeboy/TakePhoto](https://github.com/c
 **Gradle:**  
 
 ```groovy
-    compile 'com.jph.takephoto:takephoto_library:4.1.0'
+    implementation 'com.github.iflytek-duan:TakePhoto:v4.1.0'
 ```
 
 **Maven:**  
@@ -436,10 +436,7 @@ eg:
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
 </activity>
-```
-
-## 贡献  
-如果你在使用TakePhoto中遇到任何问题可以提[Issues](https://github.com/crazycodeboy/TakePhoto/issues)出来。另外欢迎大家为TakePhoto贡献智慧，欢迎大家[Fork and Pull requests](https://github.com/crazycodeboy/TakePhoto)。     
+```   
 
 ## 更新说明
 
@@ -450,30 +447,14 @@ v4.1.0(2018/4/2)
 2. Upgrade  buildToolsVersion & targetSdkVersion ；
 3. rename package name ;
 
-v4.0.3(2017/1/18)
------------------
-**Bugfixes**
-
-1. Fixed bug and add new features([`62a6725`](https://github.com/crazycodeboy/TakePhoto/commit/62a6725a99118ec0ce0f4cf1cd76b2ba70e21745))-@[Yanqilong](https://github.com/Yanqilong)
-2. fix 鲁班压缩出现路径重复([`a0a64a59`](https://github.com/crazycodeboy/TakePhoto/commit/a0a64a59762fa8554eb46b6ec544f70a5d46f551))-@[namezhouyu](https://github.com/namezhouyu)
-
-
-v4.0.2(2016/11/28)
-------------------
-1. 压缩成功后返回原图路径(originalPath), 以便用户可以自行处理原图。
-2. 压缩成功后压缩路径path改为compressPath。
-3. 压缩成功后返回图片来源类型，现在分CAMERA, OTHER两种。
-4. 用户可以配置CompressConfig.enableReserveRaw(boolean)方法，ture保留原图，false删除原图，当且仅当类型为CAMERA此配置才有效
-5. 纠正拍照旋转角度功能改为可选
-
 ## 最后
 
 ### 关于代码混淆
 如果你的项目中启用了代码混淆，可在混淆规则文件(如：proguard-rules.pro)中添加如下代码：   
 
 ```
--keep class com.jph.takephoto.** { *; }
--dontwarn com.jph.takephoto.**
+-keep class org.devio.takephototakephoto.** { *; }
+-dontwarn org.devio.takephototakephoto.**
 
 -keep class com.darsh.multipleimageselect.** { *; }
 -dontwarn com.darsh.multipleimageselect.**
